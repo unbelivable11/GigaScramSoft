@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GigaScramSoft.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91438d7124fb7d47b351dbedb0522b3056f0a1ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c019720f3d1b2dacd3bea6ef0ee52f4c03e059b")]
 [assembly: System.Reflection.AssemblyProductAttribute("GigaScramSoft.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GigaScramSoft.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
