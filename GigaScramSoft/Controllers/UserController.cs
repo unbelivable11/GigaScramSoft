@@ -29,7 +29,6 @@ namespace GigaScramSoft.Controllers
         //    {
         //        Request.Headers.Remove("Authorization");
         //    }
-
         //    return StatusCode(200, true);
         //}
 
@@ -41,20 +40,19 @@ namespace GigaScramSoft.Controllers
             userModel.Login = login;
             userModel.PasswordHash = password;
 
-            var result = await _userService.CreateUser(userModel, "User");
+            var resultFromService = await _userService.CreateUser(userModel, "User");
             var userViewModel = new UserViewModel();
 
-            if (result.Data != null)
+            if (resultFromService.Data != null)
             {
-                userViewModel.Id = result.Data.Id;
-                userViewModel.Email = result.Data.Email;
-                userViewModel.Login = result.Data.Login;
-                userViewModel.RoleName = result.Data.Role.Name;
+                userViewModel.Id = resultFromService.Data.Id;
+                userViewModel.Email = resultFromService.Data.Email;
+                userViewModel.Login = resultFromService.Data.Login;
+                userViewModel.RoleName = resultFromService.Data.Role.Name;
             }
 
-            result.Data = userModel;
-
-            return StatusCode((int)result.StatusCode, result);
+            var result = new ResponseModel<UserViewModel>(userViewModel, "OK", System.Net.HttpStatusCode.OK );
+            return StatusCode((int)resultFromService.StatusCode, result);
         }
 
         [HttpGet("GetProfile")]
