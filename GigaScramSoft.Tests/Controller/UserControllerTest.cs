@@ -45,6 +45,8 @@ namespace GigaScramSoft.Tests.Controller
             Assert.Equal(fakeUserModel.Email, responseModel.Data.Email);
             Assert.Equal(fakeUserModel.Login, responseModel.Data.Login);
             Assert.Equal("User", responseModel.Data.RoleName);
+
+            Assert.False(true);
         }
     }
 }
